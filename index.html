@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Что не так с Aviasales?</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+
+    <style>
+        .quote {
+            background-color: #fd8a27;
+            color: #fff;
+        }
+
+        .part {
+            background-color: rgb(1, 168, 212);
+        }
+
+        .disclaimer {
+            background-color: #333;
+            color: #eee;
+        }
+
+        .disclaimer p {
+            margin-bottom: 0;
+        }
+
+        .disclaimer h2,
+        .quote h2,
+        .part h2 {
+            color: #eee;
+        }
+
+        .caption a {
+            color: rgb(1, 168, 212);
+        }
+
+        .p {
+            max-width: 120%;
+            margin-top: -2.5%;
+            margin-left: -10%;
+        }
+
+        .p2 {
+            max-width: 65%;
+            margin-top: -2.5%;
+            margin-left: 22.5%;
+        }
+
+        li, p {
+            line-height: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        li.unimportant {
+            opacity: 0.5;
+        }
+
+        .no-page {
+            margin-top: -10%;
+        }
+
+        .signature {
+            font-style: italic;
+            margin-top: -1em !important;
+        }
+
+        .no-page:after {
+            display: none;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+<header class="caption">
+    <h1>Что не так с Aviasales?</h1>
+
+    <p>Краткое и субъективное исследование продукта<br/><a href="http://igor.lukanin.name" target="_blank">Игорь Луканин</a> для климатических мигрантов</p>
+
+    <style>
+        .caption {
+            color: #eee;
+            text-shadow: none;
+        }
+
+        .caption h1 {
+            margin-bottom: .25em;
+        }
+
+        .caption p {
+            line-height: 1.5em;
+        }
+
+        .caption a {
+            background: linear-gradient(to top, currentColor, currentColor .09em, transparent .09em, transparent) repeat-x;
+        }
+    </style>
+</header>
+
+<section class="slide disclaimer">
+    <div>
+        <h2>Примечание</h2>
+        <ul>
+            <li>Я слабо знаком с рынком и продуктом</li>
+            <li>Я не владею метриками и результатами A/B-тестов</li>
+        </ul>
+        <p>Поэтому всё сказанное ниже субъективно.<br/>Но не неверно, пока это не доказано цифрами :)</p>
+        <p><br/><span class="quote" style="padding: 0.5em 0.75em; margin-left: -0.75em;">Кстати, я опросил пару друзей — их мнения на таком фоне</span></p>
+    </div>
+</section>
+
+<section class="slide shout part">
+    <div>
+        <h2>Поиск билетов</h2>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Не твой друг, а просто поиск билетов</h2>
+        <ul>
+            <li>Во всех сценариях поиска не хватает интеллекта и эмпатии,<br/>желания принести пользователям максимальную пользу</li>
+            <li>Дополнительные инструменты (популярные направления,<br/>календарь цен) не упрощают, а усложняют поиск</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Поиск билетов</h2>
+        <ul>
+            <li>Не определяет текущее местоположение</li>
+            <li>Заставляет указать город вылета в поисковой форме</li>
+        </ul>
+        <p><img class="p" src="images/01.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Поиск билетов — KAYAK</h2>
+        <ul>
+            <li>Подставляет ближайший аэропорт в поисковую форму</li>
+            <li>Не мешает, потому что использует GeoIP, а не HTML5 Geolocation API</li>
+        </ul>
+        <p><img class="p" src="images/02.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Календарь в поиске билетов</h2>
+        <p>Заставляет разглядывать мелкие блеклые цифры с лупой,<br/>хотя экранного места предостаточно</p>
+        <p><img class="p" src="images/03.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Календарь в поиске билетов</h2>
+        <ul>
+            <li>Бесследно пропадает на SERPе</li>
+            <li>При этом «Календарь низких цен» — совсем другая штука</li>
+        </ul>
+        <p><img class="p" src="images/04.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Календарь низких цен</h2>
+        <ul>
+            <li>Абсолютно не похож на первый календарь</li>
+            <li>Заставляет кликать мышкой в одном месте (по столбикам),<br/>разглядывая цену в другом месте (в нижней части модального окна)</li>
+            <li>Показывает только ближайшие две недели</li>
+            <li class="unimportant">На самом деле не календарь, а две столбчатые диаграммы</li>
+            <li class="unimportant">Вертикальные оси не совпадают по диапазонам (0..89к, 0..130к)<br/>и недружелюбно подписаны (44.5к)</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide no-page">
+    <div>
+        <p>
+            <img class="no-page p" src="images/05-0.png"/>
+        </p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Календарь низких цен — Туту</h2>
+        <ul>
+            <li>Показывает цены по наведению мыши и рядом с курсором</li>
+            <li>Показывает текущий месяц и много месяцев вперёд</li>
+            <li>Вертикальные оси показывают минимальную и максимальную цену</li>
+        </ul>
+        <p><img class="p" src="images/07.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Фильтры в поиске билетов</h2>
+        <ul>
+            <li>Позволяют одним кликом скрыть все результаты поиска,<br/>не защищают от ошибок</li>
+            <li>Кнопка «Расслабить фильтры» сбрасывает все фильтры,<br/>а не последнее изменение фильтров, которое привело к ошибке</li>
+        </ul>
+        <p><img class="p" src="images/08.png"/></p>
+    </div>
+</section>
+
+<section class="slide no-page">
+    <div>
+        <p>
+            <img class="no-page p" src="images/09.png"/>
+        </p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Фильтры в поиске билетов — KAYAK</h2>
+        <ul>
+            <li>Защищает от ошибок в фильтрах пересадок и времени вылета-прилёта</li>
+            <li>Показывает распределение времени вылета-прилёта на графике</li>
+            <li>Показывает рекомендации даже на странице без результатов поиска</li>
+        </ul>
+        <p><img class="p" src="images/10.png"/></p>
+    </div>
+</section>
+
+<section class="slide no-page">
+    <div>
+        <p>
+            <img class="no-page p" src="images/11.png"/>
+        </p>
+    </div>
+</section>
+
+<section class="slide quote">
+    <div>
+        <p>«Когда я ищу на KAYAK, я могу легко указать, что точные даты не&nbsp;важны, и найти самые дешёвые билеты»</p>
+        <p class="signature">Юля — инженер, 24 года</p>
+        <p><img class="p" src="images/12.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>«Горящие авиабилеты» обескураживают</h2>
+        <ul>
+            <li>По умолчанию открываются без каких-либо результатов</li>
+            <li>Предлагают искать предложения методом тыка</li>
+            <li>Не пытаются сохранить пользователя, который ничего не нашёл</li>
+            <li class="unimportant">На странице — орфографическая ошибка в слове «напрвления»</li>
+        </ul>
+        <p><img class="p" src="images/25.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Популярные направления</h2>
+        <ul>
+            <li>Выглядят так, как будто всего лишь частично заполняют форму поиска</li>
+            <li>Весь контент — «под сгибом» страницы</li>
+            <li>Контент (страницы городов и стран) — не лучшие лендинги</li>
+            <li class="unimportant">Контент невзрачно оформлен и содержит пунктуационные ошибки<br/>(не хватает пробелов)</li>
+        </ul>
+        <p><img class="p" src="images/29.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Популярные направления — Яндекс</h2>
+        <p>Заполняют форму полностью и сразу запускают поиск</p>
+        <p><img class="p" src="images/34.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Календарь низких цен</h2>
+        <ul>
+            <li>Заставляет сделать минимум два клика, чтобы получить результат</li>
+            <li class="unimportant">Совсем не тот календарь, что доступен на SERP</li>
+        </ul>
+        <p><img class="p" src="images/30.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Календарь низких цен — ещё клик</h2>
+        <p><img class="p" src="images/31.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Календарь низких цен — результат</h2>
+        <p><img class="p" src="images/32.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Спецпредложения с фиксированным городом вылета</h2>
+        <ul>
+            <li>Возможны в Aviasales ценой кучи кликов в «Календаре низких цен»</li>
+            <li>Есть в OneTwoTrip (и были в Corner)</li>
+        </ul>
+        <p><img class="p" src="images/36.png"/></p>
+    </div>
+</section>
+
+<section class="slide shout part">
+    <div>
+        <h2>Дизайн</h2>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Дизайн c 2008 года</h2>
+        <ul>
+            <li>Разделы сайта не похожи друг на друга</li>
+            <li>Разнотипные страницы имеют один и тот же макет,<br/>однотипные страницы имеют разную «шапку»</li>
+            <li>Есть как «плоские», так и скеоморфные элементы интерфейса</li>
+            <li class="unimportant">Пара «фирменных» цветов — единственные узнаваемые элементы</li>
+        </ul>
+        <p>Нет системного подхода к дизайну. Внешний вид продукта размыт,<br/>он похож на тысячу других сайтов и не запоминается пользователям</p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Например, раздел для рекламодателей</h2>
+        <ul>
+            <li>Тот же макет, что и на главной</li>
+            <li>Весь контент — «под сгибом» страницы</li>
+            <li>Ненужные на этой странице блоки AdWords и Директа</li>
+        </ul>
+        <p><img class="p" src="images/20.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Первый вариант шапки</h2>
+        <p><img class="p" src="images/27.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Второй вариант шапки</h2>
+        <p><img class="p" src="images/28.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Третий вариант шапки</h2>
+        <p><img class="p" src="images/26.png"/></p>
+    </div>
+</section>
+
+<section class="slide quote">
+    <div>
+        <p>«Сайт tutu.ru делал хороший дизайнер из Студии Горбунова.<br/>Всё набрано Гельветикой, поэтому решил там билеты купить»</p>
+        <p class="signature">Вова — дизайнер, 29 лет</p>
+        <p><img class="p" src="images/06.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Дизайн c 2008 года</h2>
+        <ul>
+            <li>Часто планка качества дизайна довольно низкая</li>
+            <li>На любой странице можно найти огрехи вёрстки</li>
+            <li>Не учитываются граничные условия, ведущие к особым состояниям элементов интефрейса</li>
+        </ul>
+        <p>Нет внимания к деталям. Неряшливый дизайн отрицательно влияет на&nbsp;восприятие качества продукта. См. <a href="https://ru.wikipedia.org/wiki/Теория_разбитых_окон" target="_blank">теорию разбитых окон</a></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Не все адреса хороши для подписки</h2>
+        <p><img class="p" src="images/24.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Подтверждение подписки</h2>
+        <p>Утилитарное письмо от робота, свёрстанное под широкий экран</p>
+        <p><img class="p2" src="images/21.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Подтверждение подписки не работает</h2>
+        <p><img class="p" src="images/23.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Подтверждение подписки — Медуза</h2>
+        <p>Адаптивное и тёплое письмо от дорогой редакции</p>
+        <p><img class="p2" src="images/22.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Блог на WordPress, каких тысячи</h2>
+        <p><img class="p" src="images/16.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Блог</h2>
+        <ul>
+            <li>Невзрачно оформленный контент → невзрачный контент</li>
+            <li>Нечёткий CTA (поиск билетов, календарь низких цен, подписка?)</li>
+            <li>Никто не пишет комментарии (зачем вообще они здесь?)</li>
+            <li>Три (!) вида рекомендаций других статей на одной странице</li>
+        </ul>
+        <p><img class="p" src="images/17.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Журнал получше глянцевого — Тиньков</h2>
+        <p><img class="p" src="images/18.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Журнал Тинькова</h2>
+        <p>Приятный контент и рекомендации, основной и дополнительный CTA</p>
+        <p><img class="p" src="images/19.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Заголовок SERP</h2>
+        <ul>
+            <li>KAYAK заботится об удобстве пользователей, которые открыли несколько вкладок</li>
+            <li>Aviasales ставит странице неинформативный SEO-заголовок,<br/>хотя она закрыта от индексации поисковиками в robots.txt</li>
+        </ul>
+        <p><img class="p" src="images/13.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Календарь в поиске билетов</h2>
+        <ul>
+            <li>Не учитывает локальное время пользователя (было 1 августа по YEKT)</li>
+            <li>Открыт в самом неудобном виде — можно выбрать только один день</li>
+        </ul>
+        <p><img class="p" src="images/14.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Календарь в поиске билетов</h2>
+        <ul>
+            <li>Не прощает ошибок: после ввода даты вылета этот календарь закроется и откроется второй календарь. Чтобы исправить дату вылета, нужен дополнительный клик, который закроет второй календарь</li>
+            <li>Кнопка подписки находится не там, где нужно — вёрстка «едет»</li>
+        </ul>
+        <p><img class="p" src="images/14.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Хороший календарь — Яндекс</h2>
+        <p><img class="p" src="images/35.png"/></p>
+    </div>
+</section>
+
+<section class="slide">
+    <div>
+        <h2>Идеальный календарь — Envy</h2>
+        <p><img class="p" src="images/15.png"/></p>
+    </div>
+</section>
+
+<section class="slide disclaimer">
+    <div>
+        <h2>Выводы</h2>
+        <ul>
+            <li>Есть понятные направления для экспериментов и улучшения продукта</li>
+            <li>Улучшения по этим направлениям должны повлиять на все пиратские метрики (AARRR): acquisition, activation, retention, referral, revenue</li>
+        </ul>
+    </div>
+</section>
+
+<div class="progress">
+    <div></div>
+</div>
+
+<script src="node_modules/shower-core/shower.min.js"></script>
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter38795550 = new Ya.Metrika({ id:38795550, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/38795550" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
